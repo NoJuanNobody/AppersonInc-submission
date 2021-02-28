@@ -20,12 +20,13 @@ export function List({
   }
 
   return (
-    <div>
+    <div className="list">
+      <h3>All Robots</h3>
       {robotList.map( robot =>
         <div 
         onClick={() => handleSetActiveRobot(robot)} 
         key={robot.name} >
-          {robot.name}
+          <span className="robot-detail">{robot.name}</span>
           <button 
             onClick={() => handleDelete(robot)}>
               delete

@@ -22,8 +22,8 @@ export default function CreateRobot({ robots, setRobots }){
 
 
   return (
-    <form onSubmit={handleSubmit} className="App">
-      <h1>Create a robot</h1>
+    <form onSubmit={handleSubmit} >
+      <h1 className="form-heading">Create a robot</h1>
 
       <label>Name</label>
       <input
