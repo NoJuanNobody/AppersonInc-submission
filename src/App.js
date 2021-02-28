@@ -1,18 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Details from './components/Details'
+import { List } from './components/List'
+import CreateRobot from './components/CreateRobot'
 
 function App() {
+
+const initialValues = [
+  {
+    name:'R2-d2',
+    color:'gray',
+    attack: 'lazer',
+    defense: 'force field'
+  },
+  {
+    name:'robby the robot',
+    color:'gray',
+    attack: 'lazer',
+    defense: 'force field'
+  },
+  {
+    name:'optimus prime',
+    color:'red',
+    attack: 'sword',
+    defense: 'shield'
+  },
+  ];
+
+  const [robots, setRobots] = useState(initialValues);
+  const [activeRobot, setActiveRobot] = useState(initialValues[0]);
+
+  
+
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+      
+      <div>
+      <CreateRobot setRobots={setRobots} robots={robots} />
+      <h3>All Robots</h3>
+      <List 
+        robotList={robots} 
+        setRobots={setRobots}
+        
+        setActiveRobot={setActiveRobot}/>
+      <Details robot={activeRobot} />
+      </div>
     </div>
   );
 }
