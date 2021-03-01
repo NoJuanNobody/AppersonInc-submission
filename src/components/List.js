@@ -15,7 +15,6 @@ export function List({
   }
 
   const handleSetActiveRobot = (robot) => {
-    console.log(robot);
     setActiveRobot(robot);
   }
 

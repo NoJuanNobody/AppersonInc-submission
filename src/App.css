@@ -2,7 +2,9 @@
   margin: 5px;
   font-size: 20px;
 }
-
+h3{
+  color:#999;
+}
 input{
   width:60%;
   background-color: #777;
@@ -10,7 +12,7 @@ input{
 }
 form {
   background-color: black;
-  width: 300px;
+  width: 450px;
 }
 label{
   color:gold;
@@ -29,8 +31,10 @@ button:hover {
   color: #fff;
 }
 
-.App {
+.drawer {
   display:flex;
+  margin-bottom:20px;
+  padding-top:15px;
 }
 .list{
   width:80%
